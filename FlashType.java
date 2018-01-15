@@ -13,7 +13,7 @@ public class FlashType {
 	JPanel counterGroup;
 	JFileChooser chooser;
 	JMenuBar menubar;
-	JMenu kanjiProgress;
+	JMenu progress;
 	JMenuItem saveMI;
 	JMenuItem loadMI;
 	
@@ -111,7 +111,7 @@ public class FlashType {
 		chooser = new JFileChooser();
 		
 		menubar = new JMenuBar();
-		kanjiProgress = new JMenu("File");
+		progress = new JMenu("File");
 		saveMI = new JMenuItem("Save");
 		saveMI.addActionListener(new ActionListener() {
 
@@ -124,7 +124,7 @@ public class FlashType {
 			}
 			
 		});
-		kanjiProgress.add(saveMI);
+		progress.add(saveMI);
 		
 		loadMI = new JMenuItem("Load");
         loadMI.addActionListener(new ActionListener() {
@@ -142,9 +142,9 @@ public class FlashType {
                 }
             }
         });
-        kanjiProgress.add(loadMI);
+        progress.add(loadMI);
         
-		menubar.add(kanjiProgress);
+		menubar.add(progress);
 		frame.setJMenuBar(menubar);
 		
 		frame.setVisible(true);
